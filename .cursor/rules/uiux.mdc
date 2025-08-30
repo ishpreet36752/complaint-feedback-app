@@ -1,0 +1,100 @@
+---
+alwaysApply: false
+rule :Rules for Human-Centered UI/UX Design
+
+1. Personalization and Context
+
+Always start by describing the user persona. Focus on who the target audience is, their goals, behaviors, and emotional needs.
+
+Design elements should align with the context of use, ensuring the design resonates with the specific audience and addresses their unique needs and expectations.
+
+The design should feel personalized to the users’ environment or real-world scenarios, avoiding generic solutions.
+
+2. Avoid Over-Symmetry and Perfection
+
+Asymmetry: Real-world designs often have slight imperfections or asymmetry. Avoid overly symmetrical layouts unless specifically needed.
+
+Imperfection: Elements should have subtle imperfections (e.g., slight variations in shape, line thickness, or icon design). Over-polished, perfect designs can feel robotic.
+
+Design elements like buttons, icons, and typography should have a hand-crafted or organic feel—avoid pre-made, default icons.
+
+3. Humanize Typography and Visual Elements
+
+Use custom typography or fonts that reflect personality and tone, avoiding overly generic, stock fonts.
+
+Ensure illustrations, icons, and images are unique and custom-made, not stock images or templates. Hand-drawn elements are encouraged.
+
+Typography should feel personal and human, with slight imperfections or irregularities, especially in headings or call-to-action elements.
+
+4. Focus on Emotional Connections
+
+The design should cater to emotional needs. Ask for a layout, color scheme, and overall design that evokes specific emotions such as calmness, confidence, warmth, or excitement.
+
+The color scheme, typography, and layout should contribute to positive user emotions, enhancing their experience without overwhelming them.
+
+Design should align with the mood that users need to feel. The overall experience should resonate emotionally and feel human-driven.
+
+5. Use Real-World Visuals and Avoid Stock Templates
+
+Avoid using stock images or overly polished, template-based elements. The design should feel unique and authentic.
+
+Real-world textures or organic visuals should be used where appropriate (e.g., wood textures, paper-like backgrounds, or hand-drawn illustrations).
+
+Design elements should not feel like they were pulled from a generic library or a template but should feel crafted specifically for the application or brand.
+
+6. Design for Intuitive Interactions and User Flow
+
+Ensure the user flow is intuitive and easy to follow. Ask for interactive elements like buttons and forms that feel tactile and respond smoothly to user actions (e.g., slight animation, hover effects).
+
+Focus on micro-interactions that enhance the feeling of engaging with a physical interface.
+
+Elements should feel like they belong together in a way that is natural and aligns with human expectations.
+
+7. Incorporate Subtle Imperfections
+
+Request imperfect details—small imperfections in borders, shadows, or other visual elements that give the design a human feel.
+
+Slightly irregular shapes, or custom design elements, can make the design feel more natural and less robotic.
+
+Avoid using perfectly straight lines and sharp angles unless required. Curved, irregular, or organic lines are preferred to evoke a more natural aesthetic.
+
+8. Accessibility and Readability
+
+Ensure the design is accessible with clear contrast, legible font sizes, and easy navigation.
+
+The color scheme should ensure high readability, with sufficient contrast for all users, including those with visual impairments.
+
+The design should be responsive, providing a smooth experience across all devices, ensuring all content is visible and easily accessible.
+
+9. Focus on Realistic Design Details
+
+The design should include realistic details like realistic button animations, subtle transitions, or smooth page-load effects that mimic human-like behavior in interaction.
+
+Layout adjustments should be made for different screen sizes, ensuring the experience feels tailored and optimized for all devices.
+
+Focus on creating small, relatable details in the design that would normally be made by humans—like handwritten notes, personal touches, or slightly uneven spacing.
+
+10. Iteration and Evolution
+
+Designs should be refined and evolved iteratively. Ask for multiple versions or iterations of designs to see different takes on how elements or interactions can feel more personal.
+
+Ask for refinement based on feedback, where the design improves or changes with each iteration, reflecting a more tailored and human approach.
+
+Ensure the design evolves naturally, as if it’s being refined by real humans after gathering real user feedback.
+
+11. Avoid Overly Generic Design Elements
+
+Avoid typical AI or template-based designs that feel robotic or overly clean. Ensure the design doesn’t rely on overused patterns like huge buttons, predictable navigation, or stock-standard fonts.
+
+Focus on originality and creativity—elements should stand out and be tailored to the project’s context.
+
+12. Encourage Creativity and Originality
+
+Ask for original designs that stand out from what is commonly seen in AI-generated outputs. Use creative elements like hand-drawn features, personalized color palettes, and unique design patterns.
+
+The design should not be bound by generic conventions but should push creative boundaries within the constraints of the user needs and functional requirements.
+
+Conclusion:
+
+These rules ensure that the design produced feels authentic, user-centered, and human-driven. By following these guidelines, the resulting UI/UX design will be unique, personalized, and truly reflective of real user needs and emotions. Avoid anything too generic, symmetrical, or overly polished—embrace creativity, imperfection, and personalized touches to create an experience that feels natural, real, and human.
+---
