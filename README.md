@@ -1,11 +1,11 @@
 # Complaint Feedback Application
 
-## 🚀 Live Deployment
+## Live Deployment
 
 **This application is successfully deployed and accessible online at:**
 **https://complaint-feedback-app.vercel.app**
 
-## 📖 The Story Behind the App (Assignment Explanation)
+## The Story Behind the App (Assignment Explanation)
 
 This project represents a complete full-stack development journey, from backend architecture to frontend design and deployment. Here's my development story:
 
@@ -34,7 +34,7 @@ Crafted a modern, responsive user interface using Shadcn UI components:
 - **User Experience**: Intuitive navigation and smooth interactions
 - **Production Deployment**: Successfully deployed to Vercel with full functionality
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI
 - **Backend**: Next.js API Routes, Node.js, Express.js
@@ -45,7 +45,7 @@ Crafted a modern, responsive user interface using Shadcn UI components:
 - **Deployment**: Vercel
 - **Styling**: Custom CSS with travel-themed design system
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -97,7 +97,7 @@ yarn dev
 
 The application will be accessible at `http://localhost:3000`
 
-## 🚀 How to Use the Application
+## How to Use the Application
 
 ### Demo Accounts
 For quick testing, you can use these demo accounts:
@@ -119,7 +119,7 @@ For quick testing, you can use these demo accounts:
 5. **Update Status**: Change complaint status using dropdown menus
 6. **Delete Complaints**: Remove complaints if needed
 
-## 📧 Email Functionality
+## Email Functionality
 
 The application includes a comprehensive email notification system:
 
@@ -138,7 +138,7 @@ The application includes a comprehensive email notification system:
 2. Generate an App Password: Google Account → Security → App Passwords
 3. Use the App Password in your `EMAIL_PASS` environment variable
 
-## 🗃️ MongoDB Setup
+## MongoDB Setup
 
 ### MongoDB Atlas (Recommended)
 1. **Create Account**: Sign up at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
@@ -184,42 +184,42 @@ The application uses two main collections:
 Here are screenshots showcasing the application's functionality:
 
 ### 1. Homepage - Welcome Interface
-![Homepage](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/homepage.png?raw=true)
+![Homepage](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(79).png?raw=true)
 
 *The welcoming homepage featuring the Prime Vacations branding, call-to-action buttons, and user-friendly design.*
 
 ### 2. Login Modal with Demo Accounts
-![Login Modal](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/login-modal.png?raw=true)
+![Login Modal](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(74).png?raw=true)
 
 *Authentication modal showing demo account credentials and error handling for invalid login attempts.*
 
 ### 3. Complaint Submission Form
-![Complaint Form](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/complaint-form.png?raw=true)
+![Complaint Form](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(75).png?raw=true)
 
 *The feedback submission form with travel-themed categories and priority selection.*
 
 ### 4. Success Message After Submission
-![Success Message](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/success-message.png?raw=true)
+![Success Message](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(76).png?raw=true)
 
 *Confirmation dialog showing successful complaint submission with user feedback.*
 
 ### 5. Admin Dashboard
-![Admin Dashboard](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/admin-dashboard.png?raw=true)
+![Admin Dashboard](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(78).png?raw=true)
 
 *Administrative interface for managing complaints with filtering options and status management.*
 
 ### 6. Backend - MongoDB Compass (Users Collection)
-![MongoDB Users](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/mongodb-users.png?raw=true)
+![MongoDB Users](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(72).png?raw=true)
 
 *Database view showing user records with hashed passwords and role assignments.*
 
 ### 7. Backend - MongoDB Compass (Complaints Collection)
-![MongoDB Complaints](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/mongodb-complaints.png?raw=true)
+![MongoDB Complaints](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(73).png?raw=true)
 
 *Database view showing complaint records with categories, priorities, and statuses.*
 
 ### 8. API Testing - Postman
-![Postman API](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/postman-api.png?raw=true)
+![Postman API](https://github.com/ishpreet36752/complaint-feedback-app/public/images/screenshot(71).png?raw=true)
 
 *API testing demonstration showing successful complaint creation with JSON request/response.*
 
@@ -241,18 +241,18 @@ To add these screenshots to your repository:
 3. **Upload to GitHub**: Push the `docs` folder to your repository
 4. **Update URLs**: Replace the placeholder URLs in this README with the actual GitHub raw URLs
 
-## 🎯 Key Features Demonstrated
+## Key Features Demonstrated
 
-- ✅ **Full CRUD Operations**: Create, Read, Update, Delete for complaints
-- ✅ **User Authentication**: Secure login/signup with JWT
-- ✅ **Role-Based Access**: Different interfaces for users and admins
-- ✅ **Email Integration**: Automated notifications via Gmail SMTP
-- ✅ **Database Management**: MongoDB with proper schema design
-- ✅ **Modern UI/UX**: Travel-themed design with Shadcn UI
-- ✅ **Production Deployment**: Live application on Vercel
-- ✅ **API Testing**: Demonstrated with Postman
+- **Full CRUD Operations**: Create, Read, Update, Delete for complaints
+- **User Authentication**: Secure login/signup with JWT
+- **Role-Based Access**: Different interfaces for users and admins
+- **Email Integration**: Automated notifications via Gmail SMTP
+- **Database Management**: MongoDB with proper schema design
+- **Modern UI/UX**: Travel-themed design with Shadcn UI
+- **Production Deployment**: Live application on Vercel
+- **API Testing**: Demonstrated with Postman
 
-## 📞 Support
+## Support
 
 For any questions or issues, please refer to the deployment at:
 **https://complaint-feedback-app.vercel.app**
