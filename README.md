@@ -184,42 +184,42 @@ The application uses two main collections:
 Here are screenshots showcasing the application's functionality:
 
 ### 1. Homepage - Welcome Interface
-![Homepage](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(79).png?raw=true)
+![Homepage](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/public/images/Screenshot(79).png?raw=true)
 
 *The welcoming homepage featuring the Prime Vacations branding, call-to-action buttons, and user-friendly design.*
 
 ### 2. Login Modal with Demo Accounts
-![Login Modal](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(74).png?raw=true)
+![Login Modal](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/public/images/Screenshot(74).png?raw=true)
 
 *Authentication modal showing demo account credentials and error handling for invalid login attempts.*
 
 ### 3. Complaint Submission Form
-![Complaint Form](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(75).png?raw=true)
+![Complaint Form](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(75).png?raw=true)
 
 *The feedback submission form with travel-themed categories and priority selection.*
 
 ### 4. Success Message After Submission
-![Success Message](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(76).png?raw=true)
+![Success Message](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(76).png?raw=true)
 
 *Confirmation dialog showing successful complaint submission with user feedback.*
 
 ### 5. Admin Dashboard
-![Admin Dashboard](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(78).png?raw=true)
+![Admin Dashboard](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(78).png?raw=true)
 
 *Administrative interface for managing complaints with filtering options and status management.*
 
 ### 6. Backend - MongoDB Compass (Users Collection)
-![MongoDB Users](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(72).png?raw=true)
+![MongoDB Users](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(72).png?raw=true)
 
 *Database view showing user records with hashed passwords and role assignments.*
 
 ### 7. Backend - MongoDB Compass (Complaints Collection)
-![MongoDB Complaints](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(73).png?raw=true)
+![MongoDB Complaints](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(73).png?raw=true)
 
 *Database view showing complaint records with categories, priorities, and statuses.*
 
 ### 8. API Testing - Postman
-![Postman API](https://github.com/ishpreet36752/complaint-feedback-app/public/images/Screenshot(71).png?raw=true)
+![Postman API](https://github.com/ishpreet36752/complaint-feedback-app/blob/master/public/images/Screenshot(71).png?raw=true)
 
 *API testing demonstration showing successful complaint creation with JSON request/response.*
 
