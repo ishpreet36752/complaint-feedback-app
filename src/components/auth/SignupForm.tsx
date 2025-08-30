@@ -11,13 +11,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Eye, EyeOff } from "lucide-react";
 
 const signupSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
+  name: z.string().min(1, "Name is required"),
   email: z.string().email("Please enter a valid email address"),
   password: z.string().min(6, "Password must be at least 6 characters"),
   confirmPassword: z.string(),
-  role: z.enum(["user", "admin"], { 
-    errorMap: () => ({ message: "Please select a role" })
-  }),
+  role: z.enum(["user", "admin"]),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
   path: ["confirmPassword"],
