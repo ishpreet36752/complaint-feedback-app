@@ -61,7 +61,7 @@ export function ComplaintTable() {
 
       if (response.ok) {
         const updatedComplaints = complaints.map(complaint =>
-          complaint._id === id ? { ...complaint, status: newStatus as any } : complaint
+          complaint._id === id ? { ...complaint, status: newStatus as "Pending" | "In Progress" | "Resolved" } : complaint
         );
         setComplaints(updatedComplaints);
         applyFilters(updatedComplaints, statusFilter, priorityFilter);

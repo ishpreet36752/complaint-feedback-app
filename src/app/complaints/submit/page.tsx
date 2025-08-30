@@ -78,7 +78,7 @@ export default function SubmitComplaintPage() {
             </h1>
             <p className="text-lg text-[#6C757D] font-body max-w-2xl mx-auto leading-relaxed">
               Your feedback helps us create better travel experiences for everyone. 
-              Whether it's a suggestion, compliment, or concern, we value your input.
+              Whether it&apos;s a suggestion, compliment, or concern, we value your input.
             </p>
           </div>
           

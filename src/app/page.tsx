@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { AuthModal } from "@/components/auth/AuthModal";
@@ -86,7 +85,7 @@ export default function Home() {
           </p>
         </div>
 
-                {/* CTA Buttons */}
+        {/* CTA Buttons */}
         <div className="text-center mb-20">
           <div className="space-y-6 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
             <Button 
@@ -142,7 +141,7 @@ export default function Home() {
                 </div>
               </div>
               <h4 className="font-heading font-semibold mb-3 text-[#003366] text-lg">Share Your Story</h4>
-              <p className="text-sm text-[#6C757D] font-body leading-relaxed">Tell us about your travel experience, suggestions, or any concerns you'd like us to address</p>
+              <p className="text-sm text-[#6C757D] font-body leading-relaxed">Tell us about your travel experience, suggestions, or any concerns you&apos;d like us to address</p>
             </div>
             
             <div className="text-center group">
@@ -188,7 +187,7 @@ export default function Home() {
                 </div>
               </div>
               <h4 className="font-heading font-semibold mb-3 text-[#003366] text-lg">Stay Updated</h4>
-              <p className="text-sm text-[#6C757D] font-body leading-relaxed">Receive updates on your feedback and see how we're improving our services</p>
+              <p className="text-sm text-[#6C757D] font-body leading-relaxed">Receive updates on your feedback and see how we&apos;re improving our services</p>
             </div>
           </div>
         </div>

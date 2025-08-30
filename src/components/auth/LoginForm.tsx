@@ -142,12 +142,12 @@ export function LoginForm({ onSuccess, onSwitchToSignup }: LoginFormProps) {
       </form>
 
       <div className="text-center">
-        <p className="text-sm text-gray-600">
-          Don't have an account?{" "}
+        <p className="text-sm text-[#6C757D] text-center">
+          Don&apos;t have an account?{" "}
           <button
             type="button"
             onClick={onSwitchToSignup}
-            className="text-blue-600 hover:text-blue-700 font-medium"
+            className="text-[#FF6600] hover:text-[#E55A00] font-medium transition-colors"
           >
             Sign up here
           </button>
