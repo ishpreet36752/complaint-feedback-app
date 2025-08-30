@@ -7,6 +7,7 @@ export interface IComplaint extends Document {
   priority: "Low" | "Medium" | "High";
   status: "Pending" | "In Progress" | "Resolved";
   dateSubmitted: Date;
+  userId: mongoose.Types.ObjectId;
 }
 
 const ComplaintSchema = new Schema<IComplaint>(
@@ -39,6 +40,11 @@ const ComplaintSchema = new Schema<IComplaint>(
       type: Date,
       default: Date.now,
     },
+    userId: { 
+      type: mongoose.Schema.Types.ObjectId, 
+      ref: "User", 
+      required: true 
+    }, // 👈 new field
   },
   { timestamps: true }
 );

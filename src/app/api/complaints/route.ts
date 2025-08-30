@@ -2,11 +2,24 @@ import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Complaint from "@/models/Complaint";
 import { requireAuth } from "@/app/api/middleware";
+import { sendNewComplaintEmail } from "@/lib/mailer";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
     await dbConnect();
-    const complaints = await Complaint.find({});
+
+    const authResult = requireAuth(request, ["user", "admin"]);
+    if (authResult instanceof NextResponse) {
+      return authResult;
+    }
+
+    let complaints;
+    if (authResult.role === "admin") {
+      complaints = await Complaint.find().populate("userId", "name email");
+    } else {
+      complaints = await Complaint.find({ userId: authResult.id });
+    }
+
     return NextResponse.json({ success: true, data: complaints });
   } catch (error) {
     return NextResponse.json(
@@ -20,15 +33,26 @@ export async function POST(request: NextRequest) {
   try {
     const authResult = requireAuth(request, ["user", "admin"]);
     if (authResult instanceof NextResponse) {
-      return authResult; 
+      return authResult;
     }
 
     await dbConnect();
     const body = await request.json();
-    
-    const complaint = new Complaint(body);
+
+    const complaint = new Complaint({
+      ...body,
+      userId: authResult.id,
+    });
     await complaint.save();
-    
+
+    try {
+      await sendNewComplaintEmail(complaint);
+      console.log("Email notification sent for new complaint");
+    } catch (emailError) {
+      console.error("Failed to send email notification:", emailError);
+      // Don't fail the request if email fails
+    }
+
     return NextResponse.json(
       { success: true, data: complaint },
       { status: 201 }
