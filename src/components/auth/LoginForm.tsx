@@ -160,9 +160,9 @@ export function LoginForm({ onSuccess, onSwitchToSignup }: LoginFormProps) {
            <p><strong>Admin:</strong> admin@example.com / password123</p>
            <p><strong>User:</strong> user@example.com / password123</p>
          </div>
-         <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded text-xs text-yellow-800">
+         {/* <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded text-xs text-yellow-800">
            <strong>Security Note:</strong> In production, always use HTTPS to encrypt login credentials in transit.
-         </div>
+         </div> */}
        </div>
     </div>
   );

@@ -236,9 +236,9 @@ export function SignupForm({ onSuccess, onSwitchToLogin }: SignupFormProps) {
         </p>
       </div>
 
-      <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-xs text-yellow-800">
+      {/* <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-xs text-yellow-800">
         <strong>Security Note:</strong> In production, always use HTTPS to encrypt registration data in transit.
-      </div>
+      </div> */}
     </div>
   );
 }
