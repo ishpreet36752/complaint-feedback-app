@@ -1,50 +1,52 @@
 import mongoose, { Schema, Document, models } from "mongoose";
 
 export interface IComplaint extends Document {
-    name: string;
-    email: string;
-    message: string;
-    status: "pending" | "resolved";
-    createdAt: Date;
+  title: string;
+  description: string;
+  category: "Product" | "Service" | "Support";
+  priority: "Low" | "Medium" | "High";
+  status: "Pending" | "In Progress" | "Resolved";
+  dateSubmitted: Date;
 }
 
 const ComplaintSchema = new Schema<IComplaint>(
-    {
-        name: { 
-            type: String, 
-            required: true 
-        },
-        email: { 
-            type: String, 
-            required: true 
-        },
-        message: { 
-            type: String, 
-            required: true 
-        },
-        status: { 
-            type: String, 
-            enum: ["pending", "in-progress", "resolved"], 
-            default: "pending" 
-        },
-        priority: { 
-            type: String, 
-            enum: ["low", "medium", "high"], 
-            default: "medium" 
-        },
-        category: { 
-            type: String, 
-            enum: ["service", "product", "billing", "other"], 
-            default: "other" 
-        },
-        adminNotes: { 
-            type: String 
-        },
+  {
+    title: {
+      type: String,
+      required: true,
+      trim: true,
     },
-    { timestamps: true }
+    description: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      enum: ["Product", "Service", "Support"],
+      required: true,
+    },
+    priority: {
+      type: String,
+      enum: ["Low", "Medium", "High"],
+      required: true,
+    },
+    status: {
+      type: String,
+      enum: ["Pending", "In Progress", "Resolved"],
+      default: "Pending",
+    },
+    dateSubmitted: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  { timestamps: true }
 );
 
-const Complaint =
-    models.Complaint || mongoose.model<IComplaint>("Complaint", ComplaintSchema);
+if (models.Complaint) {
+  delete models.Complaint;
+}
+
+const Complaint = mongoose.model<IComplaint>("Complaint", ComplaintSchema);
 
 export default Complaint;
