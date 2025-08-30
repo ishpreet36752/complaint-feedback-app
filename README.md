@@ -1,374 +1,262 @@
-# ComplaintBox - Feedback Management System
+# Complaint Feedback Application
 
-A full-stack web application built with Next.js, TypeScript, and MongoDB that allows users to submit complaints and administrators to manage them efficiently.
+## 🚀 Live Deployment
 
-## Features
+**This application is successfully deployed and accessible online at:**
+**https://complaint-feedback-app.vercel.app**
 
-### User Features
-- **Complaint Submission**: Submit complaints with title, description, category, and priority
-- **Form Validation**: Real-time validation using Zod schemas
-- **Responsive Design**: Works seamlessly on mobile and desktop
+## 📖 The Story Behind the App (Assignment Explanation)
 
-### Admin Features
-- **Complaint Management**: View, update, and delete complaints
-- **Status Updates**: Change complaint status (Pending, In Progress, Resolved)
-- **Filtering**: Filter complaints by status and priority
-- **Email Notifications**: Receive notifications for new complaints and status updates
+This project represents a complete full-stack development journey, from backend architecture to frontend design and deployment. Here's my development story:
 
-### Security Features
-- **JWT Authentication**: Secure HTTP-only cookie-based authentication
-- **Role-based Access**: Separate user and admin interfaces
-- **Protected Routes**: Secure API endpoints
+### 1. **Deployment First Approach**
+The application is fully deployed and live on Vercel, demonstrating end-to-end development and production readiness. Users can immediately access and test all functionality without any local setup.
 
-## Tech Stack
+### 2. **Backend Development & CRUD Operations**
+I personally developed the complete backend infrastructure, implementing essential CRUD (Create, Read, Update, Delete) operations:
+- **User Management**: Secure authentication system with JWT tokens
+- **Complaint System**: Full CRUD operations for complaint management
+- **Role-Based Access**: Distinct functionalities for users and administrators
+- **Database Integration**: MongoDB with Mongoose for data persistence
+- **API Endpoints**: RESTful API design for all operations
 
-- **Frontend**: Next.js 14, TypeScript, Tailwind CSS, ShadCN UI
-- **Backend**: Next.js API Routes, MongoDB, Mongoose
-- **Authentication**: JWT with HTTP-only cookies
-- **Email**: Nodemailer for notifications
-- **Form Handling**: React Hook Form with Zod validation
-- **Database**: MongoDB Atlas (cloud) or local MongoDB
+### 3. **Email Integration with Gmail SMTP**
+Implemented a robust email notification system using Gmail's SMTP service:
+- **Automated Notifications**: Email confirmations for complaint submissions
+- **Status Updates**: Real-time email notifications for complaint status changes
+- **Professional Communication**: Branded email templates for user engagement
+- **SMTP Configuration**: Secure email delivery using Gmail's SMTP servers
 
-## Prerequisites
+### 4. **Frontend with Shadcn UI & Deployment**
+Crafted a modern, responsive user interface using Shadcn UI components:
+- **Modern Design**: Clean, professional interface with travel-themed aesthetics
+- **Responsive Layout**: Optimized for all devices and screen sizes
+- **User Experience**: Intuitive navigation and smooth interactions
+- **Production Deployment**: Successfully deployed to Vercel with full functionality
 
-Before running this application, make sure you have:
+## 🛠️ Technologies Used
 
-- **Node.js** (v18 or higher)
-- **npm** or **yarn** package manager
-- **MongoDB** database (local or cloud)
-- **Email service** (Gmail, SendGrid, etc.)
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Next.js API Routes, Node.js, Express.js
+- **Database**: MongoDB with Mongoose ODM
+- **Authentication**: JWT (JSON Web Tokens)
+- **Email Service**: Nodemailer with Gmail SMTP
+- **Validation**: Zod schema validation
+- **Deployment**: Vercel
+- **Styling**: Custom CSS with travel-themed design system
 
-## Installation
+## ⚙️ Setup Instructions
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+- MongoDB Atlas account (or local MongoDB instance)
+- Gmail account for email functionality
 
 ### 1. Clone the Repository
-
 ```bash
-git clone https://github.com/yourusername/complaint-feedback-app.git
+git clone https://github.com/ishpreet36752/complaint-feedback-app.git
 cd complaint-feedback-app
 ```
 
 ### 2. Install Dependencies
-
 ```bash
 npm install
 # or
 yarn install
 ```
 
-### 3. Environment Configuration
-
-Create a `.env.local` file in the root directory:
+### 3. Environment Variables Setup
+Create a `.env.local` file in the root directory and add the following variables:
 
 ```env
-# Database Configuration
-MONGODB_URI=mongodb://localhost:27017/complaint-app
-# or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/complaint-app
+# MongoDB Connection
+MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/complaint-app"
 
-# JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key-here
+# JWT Secret for Authentication
+JWT_SECRET="your-super-secret-jwt-key-here"
 
-# Email Configuration (Gmail Example)
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-specific-password
-ADMIN_EMAIL=admin@yourcompany.com
-
-# Optional: Node Environment
-NODE_ENV=development
+# Email Configuration (Gmail SMTP)
+EMAIL_USER="your-email@gmail.com"
+EMAIL_PASS="your-gmail-app-password"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT="587"
 ```
 
-### 4. Database Setup
+**Important Notes:**
+- **MONGODB_URI**: Get this from MongoDB Atlas dashboard
+- **JWT_SECRET**: Generate a strong random string for security
+- **EMAIL_PASS**: Use Gmail App Password (not your regular password) if 2FA is enabled
 
-#### Option A: Local MongoDB
-1. Install MongoDB locally
-2. Start MongoDB service
-3. Create database: `complaint-app`
-
-#### Option B: MongoDB Atlas (Recommended)
-1. Create account at [MongoDB Atlas](https://www.mongodb.com/atlas)
-2. Create a new cluster
-3. Get connection string and add to `.env.local`
-
-### 5. Email Configuration
-
-#### Gmail Setup (Recommended for Development)
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an App Password:
-   - Go to Google Account settings
-   - Security → 2-Step Verification → App passwords
-   - Generate password for "Mail"
-3. Use the generated password in `EMAIL_PASS`
-
-#### Alternative Email Services
-- **SendGrid**: Use API key instead of password
-- **Mailgun**: Use API key and domain
-- **AWS SES**: Use AWS credentials
-
-### 6. Run the Application
-
+### 4. Run the Application Locally
 ```bash
-# Development mode
 npm run dev
 # or
 yarn dev
-
-# Production build
-npm run build
-npm start
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be accessible at `http://localhost:3000`
 
-## Usage Guide
+## 🚀 How to Use the Application
 
-### For Users
+### Demo Accounts
+For quick testing, you can use these demo accounts:
+- **Admin**: `admin@example.com` / `password123`
+- **User**: `user@example.com` / `password123`
 
-1. **Access the Application**
-   - Navigate to `http://localhost:3000`
-   - Click "Submit Complaint" button
+### User Flow
+1. **Homepage**: Visit the application and see the welcoming interface
+2. **Authentication**: Sign up for a new account or log in with existing credentials
+3. **Submit Complaint**: Navigate to "Share Your Experience" to submit feedback
+4. **Form Fields**: Fill in title, description, category (Product/Service/Support), and priority
+5. **Submission**: Submit and receive email confirmation
 
-2. **Authentication**
-   - Sign up for a new account or log in
-   - Choose "User" role during registration
+### Admin Flow
+1. **Admin Login**: Log in with admin credentials
+2. **Dashboard Access**: Navigate to "Admin Dashboard"
+3. **Manage Complaints**: View all submitted complaints in a table format
+4. **Filter Options**: Filter by status (Pending/In Progress/Resolved) and priority
+5. **Update Status**: Change complaint status using dropdown menus
+6. **Delete Complaints**: Remove complaints if needed
 
-3. **Submit a Complaint**
-   - Fill in the complaint form:
-     - **Title**: Brief description of the issue
-     - **Description**: Detailed explanation
-     - **Category**: Product, Service, or Support
-     - **Priority**: Low, Medium, or High
-   - Click "Submit Complaint"
+## 📧 Email Functionality
 
-### For Administrators
+The application includes a comprehensive email notification system:
 
-1. **Admin Access**
-   - Register with "Admin" role or use demo account
-   - Demo Admin: `admin@example.com` / `password123`
+### Configuration
+- **SMTP Provider**: Gmail SMTP server
+- **Security**: Uses App Passwords for enhanced security
+- **Templates**: Professional email templates for notifications
 
-2. **Manage Complaints**
-   - Access Admin Dashboard
-   - View all submitted complaints
-   - Update status using dropdown
-   - Delete complaints if needed
-   - Filter by status or priority
+### Email Features
+- **Complaint Confirmation**: Users receive confirmation emails upon submission
+- **Status Updates**: Real-time notifications when complaint status changes
+- **Professional Branding**: Emails include Prime Vacations branding
 
-3. **Email Notifications**
-   - Receive emails for new complaints
-   - Get notifications for status updates
+### Gmail Setup Instructions
+1. Enable 2-Factor Authentication on your Gmail account
+2. Generate an App Password: Google Account → Security → App Passwords
+3. Use the App Password in your `EMAIL_PASS` environment variable
 
-## API Endpoints
+## 🗃️ MongoDB Setup
 
-### Authentication
-- `POST /api/auth/signup` - User registration
-- `POST /api/auth/login` - User login
-- `POST /api/auth/logout` - User logout
-- `GET /api/auth/me` - Get current user info
+### MongoDB Atlas (Recommended)
+1. **Create Account**: Sign up at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. **Create Cluster**: Set up a new cluster (free tier available)
+3. **Database User**: Create a database user with read/write permissions
+4. **Network Access**: Configure IP whitelist (0.0.0.0/0 for development)
+5. **Connection String**: Copy the connection string to your `MONGODB_URI`
 
-### Complaints
-- `POST /api/complaints` - Create new complaint (User)
-- `GET /api/complaints` - Get complaints (Admin: all, User: own)
-- `PUT /api/complaints/[id]` - Update complaint
-- `DELETE /api/complaints/[id]` - Delete complaint
+### Database Schema
+The application uses two main collections:
 
-## Email Configuration
-
-### Gmail Setup (Detailed)
-
-1. **Enable 2FA**
-   ```bash
-   # Go to Google Account → Security → 2-Step Verification
-   # Enable if not already enabled
-   ```
-
-2. **Generate App Password**
-   ```bash
-   # Google Account → Security → App passwords
-   # Select "Mail" and generate password
-   # Copy the 16-character password
-   ```
-
-3. **Update Environment Variables**
-   ```env
-   EMAIL_USER=your-gmail@gmail.com
-   EMAIL_PASS=your-16-char-app-password
-   ADMIN_EMAIL=admin@yourcompany.com
-   ```
-
-### SendGrid Setup
-
-1. **Create SendGrid Account**
-2. **Generate API Key**
-3. **Update Environment Variables**
-   ```env
-   EMAIL_USER=apikey
-   EMAIL_PASS=your-sendgrid-api-key
-   ```
-
-## Deployment
-
-### Vercel Deployment (Recommended)
-
-1. **Prepare for Deployment**
-   ```bash
-   npm run build
-   ```
-
-2. **Deploy to Vercel**
-   ```bash
-   # Install Vercel CLI
-   npm i -g vercel
-
-   # Deploy
-   vercel
-   ```
-
-3. **Environment Variables**
-   - Add all environment variables in Vercel dashboard
-   - Ensure `NODE_ENV=production`
-
-### Heroku Deployment
-
-1. **Create Heroku App**
-   ```bash
-   heroku create your-app-name
-   ```
-
-2. **Add Environment Variables**
-   ```bash
-   heroku config:set MONGODB_URI=your-mongodb-uri
-   heroku config:set JWT_SECRET=your-jwt-secret
-   heroku config:set EMAIL_USER=your-email
-   heroku config:set EMAIL_PASS=your-password
-   heroku config:set ADMIN_EMAIL=admin@yourcompany.com
-   ```
-
-3. **Deploy**
-   ```bash
-   git push heroku main
-   ```
-
-## Project Structure
-
-```
-complaint-feedback-app/
-├── src/
-│   ├── app/
-│   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   ├── login/route.ts
-│   │   │   │   ├── signup/route.ts
-│   │   │   │   ├── logout/route.ts
-│   │   │   │   └── me/route.ts
-│   │   │   └── complaints/
-│   │   │       ├── route.ts
-│   │   │       └── [id]/route.ts
-│   │   ├── complaints/
-│   │   │   ├── submit/page.tsx
-│   │   │   └── admin/page.tsx
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── auth/
-│   │   │   ├── LoginForm.tsx
-│   │   │   ├── SignupForm.tsx
-│   │   │   └── AuthModal.tsx
-│   │   ├── ComplaintForm.tsx
-│   │   ├── ComplaintTable.tsx
-│   │   ├── Navbar.tsx
-│   │   └── ui/
-│   ├── contexts/
-│   │   └── AuthContext.tsx
-│   ├── lib/
-│   │   ├── auth.ts
-│   │   ├── db.ts
-│   │   └── mailer.ts
-│   └── models/
-│       ├── User.ts
-│       └── Complaint.ts
-├── public/
-├── package.json
-└── README.md
+**Users Collection:**
+```javascript
+{
+  _id: ObjectId,
+  name: String,
+  email: String,
+  password: String (hashed),
+  role: "user" | "admin",
+  createdAt: Date,
+  updatedAt: Date
+}
 ```
 
-## Security Considerations
+**Complaints Collection:**
+```javascript
+{
+  _id: ObjectId,
+  title: String,
+  description: String,
+  category: "Product" | "Service" | "Support",
+  priority: "Low" | "Medium" | "High",
+  status: "Pending" | "In Progress" | "Resolved",
+  userId: ObjectId (reference to Users),
+  dateSubmitted: Date,
+  createdAt: Date,
+  updatedAt: Date
+}
+```
 
-### Production Security
-- **HTTPS**: Always use HTTPS in production
-- **Environment Variables**: Never commit secrets to Git
-- **JWT Security**: Use strong, unique JWT secrets
-- **Input Validation**: All inputs validated with Zod
-- **Rate Limiting**: Consider implementing rate limiting
-- **CORS**: Configure CORS for production domains
+## 📸 Screenshots
 
-### Database Security
-- ✅ **Connection String**: Use environment variables
-- ✅ **User Permissions**: Minimal required permissions
-- ✅ **Backup Strategy**: Regular database backups
+Here are screenshots showcasing the application's functionality:
 
-## Troubleshooting
+### 1. Homepage - Welcome Interface
+![Homepage](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/homepage.png?raw=true)
 
-### Common Issues
+*The welcoming homepage featuring the Prime Vacations branding, call-to-action buttons, and user-friendly design.*
 
-1. **MongoDB Connection Error**
-   ```bash
-   # Check if MongoDB is running
-   mongod --version
-   
-   # Verify connection string
-   echo $MONGODB_URI
-   ```
+### 2. Login Modal with Demo Accounts
+![Login Modal](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/login-modal.png?raw=true)
 
-2. **Email Not Sending**
-   ```bash
-   # Check email credentials
-   # Verify app password for Gmail
-   # Check firewall/network settings
-   ```
+*Authentication modal showing demo account credentials and error handling for invalid login attempts.*
 
-3. **JWT Authentication Issues**
-   ```bash
-   # Verify JWT_SECRET is set
-   # Check cookie settings
-   # Clear browser cookies
-   ```
+### 3. Complaint Submission Form
+![Complaint Form](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/complaint-form.png?raw=true)
 
-4. **Build Errors**
-   ```bash
-   # Clear cache and reinstall
-   rm -rf node_modules package-lock.json
-   npm install
-   ```
+*The feedback submission form with travel-themed categories and priority selection.*
 
-##  Contributing
+### 4. Success Message After Submission
+![Success Message](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/success-message.png?raw=true)
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+*Confirmation dialog showing successful complaint submission with user feedback.*
 
-##  License
+### 5. Admin Dashboard
+![Admin Dashboard](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/admin-dashboard.png?raw=true)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+*Administrative interface for managing complaints with filtering options and status management.*
 
-##  Support
+### 6. Backend - MongoDB Compass (Users Collection)
+![MongoDB Users](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/mongodb-users.png?raw=true)
 
-For support and questions:
-- Create an issue in the GitHub repository
-- Email: support@yourcompany.com
-- Documentation: [Wiki](https://github.com/yourusername/complaint-feedback-app/wiki)
+*Database view showing user records with hashed passwords and role assignments.*
 
-##  Roadmap
+### 7. Backend - MongoDB Compass (Complaints Collection)
+![MongoDB Complaints](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/mongodb-complaints.png?raw=true)
 
-- [ ] Real-time notifications using WebSockets
-- [ ] File upload for complaint attachments
-- [ ] Advanced reporting and analytics
-- [ ] Mobile app development
-- [ ] Multi-language support
-- [ ] Advanced filtering and search
-- [ ] Complaint templates
-- [ ] SLA tracking and alerts
+*Database view showing complaint records with categories, priorities, and statuses.*
+
+### 8. API Testing - Postman
+![Postman API](https://github.com/ishpreet36752/complaint-feedback-app/blob/main/docs/postman-api.png?raw=true)
+
+*API testing demonstration showing successful complaint creation with JSON request/response.*
+
+## 🔧 How to Add Screenshots
+
+To add these screenshots to your repository:
+
+1. **Create a `docs` folder** in your project root
+2. **Save the screenshots** with descriptive names:
+   - `homepage.png`
+   - `login-modal.png`
+   - `complaint-form.png`
+   - `success-message.png`
+   - `admin-dashboard.png`
+   - `mongodb-users.png`
+   - `mongodb-complaints.png`
+   - `postman-api.png`
+
+3. **Upload to GitHub**: Push the `docs` folder to your repository
+4. **Update URLs**: Replace the placeholder URLs in this README with the actual GitHub raw URLs
+
+## 🎯 Key Features Demonstrated
+
+- ✅ **Full CRUD Operations**: Create, Read, Update, Delete for complaints
+- ✅ **User Authentication**: Secure login/signup with JWT
+- ✅ **Role-Based Access**: Different interfaces for users and admins
+- ✅ **Email Integration**: Automated notifications via Gmail SMTP
+- ✅ **Database Management**: MongoDB with proper schema design
+- ✅ **Modern UI/UX**: Travel-themed design with Shadcn UI
+- ✅ **Production Deployment**: Live application on Vercel
+- ✅ **API Testing**: Demonstrated with Postman
+
+## 📞 Support
+
+For any questions or issues, please refer to the deployment at:
+**https://complaint-feedback-app.vercel.app**
 
 ---
 
-**Built with ❤️ using Next.js, TypeScript, and MongoDB**
+*This project demonstrates comprehensive full-stack development skills, from backend API development to frontend design and production deployment.*
