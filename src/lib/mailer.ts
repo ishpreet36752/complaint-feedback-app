@@ -36,6 +36,7 @@ export async function sendNewComplaintEmail(complaint: any) {
 
   const subject = "New Complaint Submitted";
   const text = `New complaint submitted:
+  Id : ${complaint._id}
 Title: ${complaint.title}
 Category: ${complaint.category}
 Priority: ${complaint.priority}
@@ -44,6 +45,7 @@ Date Submitted: ${complaint.dateSubmitted}`;
 
   const html = `
     <h2>New Complaint Submitted</h2>
+       <p><strong>Id:</strong> ${complaint._id}</p>
     <p><strong>Title:</strong> ${complaint.title}</p>
     <p><strong>Category:</strong> ${complaint.category}</p>
     <p><strong>Priority:</strong> ${complaint.priority}</p>
@@ -63,6 +65,7 @@ export async function sendStatusUpdateEmail(complaint: any, oldStatus: string) {
 
   const subject = "Complaint Status Updated";
   const text = `Complaint status updated:
+Id : ${complaint._id}
 Title: ${complaint.title}
 Old Status: ${oldStatus}
 New Status: ${complaint.status}
@@ -70,6 +73,7 @@ Date Updated: ${new Date().toLocaleString()}`;
 
   const html = `
     <h2>Complaint Status Updated</h2>
+    <p><strong>Id:</strong> ${complaint._id}</p>
     <p><strong>Title:</strong> ${complaint.title}</p>
     <p><strong>Old Status:</strong> ${oldStatus}</p>
     <p><strong>New Status:</strong> ${complaint.status}</p>
