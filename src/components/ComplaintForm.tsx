@@ -15,8 +15,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 const complaintSchema = z.object({
   title: z.string().min(1, "Title is required").max(100, "Title must be less than 100 characters"),
   description: z.string().min(10, "Description must be at least 10 characters").max(500, "Description must be less than 500 characters"),
-  category: z.enum(["Product", "Service", "Support"], { required_error: "Please select a category" }),
-  priority: z.enum(["Low", "Medium", "High"], { required_error: "Please select a priority" }),
+  category: z.enum(["Product", "Service", "Support"]),
+  priority: z.enum(["Low", "Medium", "High"]),
 });
 
 type ComplaintFormData = z.infer<typeof complaintSchema>;
